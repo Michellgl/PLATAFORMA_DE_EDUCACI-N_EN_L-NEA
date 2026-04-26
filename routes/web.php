@@ -27,7 +27,6 @@ Route::get('/', function () {
 Route::middleware(['auth', 'verified'])->group(function () {
     
     // El catálogo de cursos (Dashboard)
-    Route::get('/dashboard', [StudentCourseController::class, 'index'])->name('dashboard');
     
     // Proceso de inscripción (POST)
     Route::post('/curso/{course}/enroll', [StudentCourseController::class, 'enroll'])->name('courses.enroll');
