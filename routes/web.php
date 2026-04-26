@@ -39,6 +39,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/lesson/{lesson}/complete', [StudentCourseController::class, 'completeLesson'])->name('lessons.complete');
 
     // Guardar reseña y comentario (Obligatorio para el diploma)
+    Route::post('/curso/{course}/review', [StudentCourseController::class, 'storeReview'])->name('courses.review');
 
     // Generar el diploma (Protegido por progreso y reseña)
     Route::get('/curso/{course}/diploma', [StudentCourseController::class, 'diploma'])->name('student.diploma');
