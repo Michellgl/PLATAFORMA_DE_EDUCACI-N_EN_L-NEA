@@ -15,11 +15,6 @@ use App\Http\Controllers\StudentCourseController;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-*/
 
 // 1. Ruta de bienvenida (Redirige al login)
 Route::get('/', function () {
